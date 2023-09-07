@@ -1,0 +1,88 @@
+html{
+    background-color:rgb(0, 33, 60)
+}
+
+h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    margin: 5, auto;
+    text-align: center;
+}
+
+
+
+#ref_table > h2 {
+    text-align:center;
+    margin-top: 5%;
+    margin-bottom: 1px;
+    color: white;
+}
+
+#ref_table > table {
+    background-color: rgb(0, 33, 60);
+    color: white;
+    border: 1px solid rgb(255, 255, 255, .5);
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#submit_field {
+    margin: 20px, auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+    font-size:200%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0 auto;
+    text-align: center;
+    background-color:  rgb(255, 255, 255, .5);
+    
+    border-color: white;
+}
+.item {
+    flex: none;
+    display: block;
+    padding: 10px;
+    width: 50%;
+    
+    background-color:rgb(0, 33, 60);
+}
+
+.item > label {
+    display:block;
+
+    color: white;
+}
+
+#submit_btn {
+    margin: 10px auto;
+}
+
+#result_div {
+    margin: 20px, auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+    font-size:200%;
+    font-family:'Courier New', Courier, monospace;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    
+}
+
+.error {
+    background-color: red
+    
+}
+.success{
+    background-color: green;
+}

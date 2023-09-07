@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %} CashGenie {% endblock %}
+
+{% block content %}
+<h1>Forex Converter</h1>
+<div id="ref_table">
+    <h2>Common Currencies</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Currency</th>
+                    <th>Abbreviation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>United States Dollar</td>
+                    <td>USD</td>
+                </tr>
+                <tr>
+                    <td>Euro</td>
+                    <td>EUR</td>
+                </tr>
+                <tr>
+                    <td>British Pound Sterling</td>
+                    <td>GBP</td>
+                </tr>
+                <tr>
+                    <td>Japanese Yen</td>
+                    <td>JPY</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+</div>
+
+<form action="/submit" method="POST">
+    <div id="submit_field">
+        <div class="item">
+            <label for="from">Convert from</label>
+            <input type="text" placeholder="ex. USD,EUR,GBP,JPY" name="from" maxlength="3">
+        </div>
+        <div class="item">
+            <label for="to">Converting to</label>
+            <input type="text" placeholder="ex. USD,EUR,GBP,JPY" name="to" maxlength="3">
+        </div>
+        <div class="item">
+            <label for="amount">Amount</label>
+            <input type="number" step="0.01" min=0 placeholder="00.00" name="amount">
+        </div>
+        <input type="submit" id="submit_btn" value="Convert!">
+    </div>
+</form>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul class="flash-messages">
+    {% for category, message in messages %}
+    <li class="{{ category }}">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+{% endblock %}
